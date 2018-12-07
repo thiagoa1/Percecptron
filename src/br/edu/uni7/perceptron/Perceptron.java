@@ -15,7 +15,7 @@ public class Perceptron {
 		weights = new double[inputSize];
 
 		for (int i = 0; i < weights.length; i++) {
-			// Gera um número aleatório com valor entre -1 e 1
+			// Gera um nï¿½mero aleatï¿½rio com valor entre -1 e 1
 			weights[i] = randomValue(minValue, maxValue);
 		}
 		biasWeight = randomValue(minValue, maxValue);
@@ -26,7 +26,6 @@ public class Perceptron {
 //	public double train(double[] inputs, double expected) {
 //		double output = eval(inputs);
 //		
-//		// Uma função de erro comum é o erro médio quadrático
 //		double error = expected - output;
 //		
 //		if (error != 0) {
@@ -41,7 +40,6 @@ public class Perceptron {
 	public double train(double[] inputs, double expected) {
 		double output = eval(inputs);
 
-		// Uma função de erro comum é o erro médio quadrático
 		double error = expected - output;
 
 		while (error != 0) {
@@ -53,7 +51,7 @@ public class Perceptron {
 
 			output = eval(inputs);
 
-			// Uma função de erro comum é o erro médio quadrático
+			// Uma funÃ§Ã£o de erro comum : erro mÃ©dio quadrÃ¡tico
 			error = expected - output;
 		}
 		return output;
@@ -61,7 +59,7 @@ public class Perceptron {
 
 	public double eval(double[] inputs) {
 		double sum = apply(inputs);
-		// Função de ativação - Passo: -1 ou 1
+		// FunÃ§Ã£o de ativaÃ§Ã£o Passo: -1 ou 1
 		return activationFunction(sum);
 	}
 
